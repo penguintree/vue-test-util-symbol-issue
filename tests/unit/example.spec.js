@@ -1,10 +1,10 @@
 import { shallowMount, mount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import ParentComponent from '@/components/ParentComponent.vue'
 
-describe('HelloWorld.vue', () => {
+describe('ParentComponent.vue', () => {
    it('shallow mount', () => {
       const msg = 'new message'
-      const wrapper = shallowMount(HelloWorld, {
+      const wrapper = shallowMount(ParentComponent, {
          propsData: { msg }
       })
       expect(wrapper.text()).toMatch(msg)
@@ -12,7 +12,7 @@ describe('HelloWorld.vue', () => {
 
    it('mount', () => {
       const msg = 'new message'
-      const wrapper = mount(HelloWorld, {
+      const wrapper = mount(ParentComponent, {
          propsData: { msg }
       })
       expect(wrapper.text()).toMatch(msg)
